@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Shuffle</title>
+        <link rel="stylesheet" href="app.css">
+    </head>
+
+
+    <div class="container">
+        <ul>
+            <li class="filter" data-filter="all">All</li>
+            <li class="filter" data-filter=".design">Design</li>
+            <li class="filter" data-filter=".games">Games</li>
+            <li class="filter" data-filter=".one">one</li>
+        </ul>
+        <div class="gallary">
+            <div class="shuffle design"></div>
+            <div class="shuffle design"></div>
+            <div class="shuffle design"></div>
+            <div class="shuffle design"></div>
+            <div class="shuffle games"></div>
+            <div class="shuffle games"></div>
+            <div class="shuffle games"></div>
+            <div class="shuffle games"></div>
+            <div class="shuffle games one"></div>
+        </div>
+    </div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="shuffle.js"></script>
+    <script>
+        $(".gallary").shuffle()
+    </script>
+</html>

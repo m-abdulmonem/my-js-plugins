@@ -1,0 +1,127 @@
+*,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background: #eeeeee;
+    font-family: Tahoma, arial;
+    font-weight: bold;
+    color: #d8d8dd;
+}
+.commponnents{
+    background: #fff;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 2px solid #00000059;
+}
+.commponnents h1{
+    margin-bottom: 50px
+}
+.checkbox,.radio{
+    position:relative;
+    cursor:pointer;
+    height:32px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0.5em;
+}
+.checkbox input,
+.radio input {
+    display:none;
+}
+.checkbox span:before,
+.checkbox span:after,
+.radio span::before,
+.radio span::after{
+    content:"";
+}
+.checkbox span:before {
+    width:64px;
+    height:32px;
+    margin-right:8px;
+    background:#EEE;
+    border-radius:32px;
+    display:inline-block;
+    vertical-align:middle;
+    transition:all .5s cubic-bezier(.175, .885, .32, 1);
+}
+.checkbox span:after {
+    margin:2px;
+    width:28px;
+    height:28px;
+    background:#FFF;
+    border-radius:28px;
+    position:absolute;
+    left:0;
+    z-index:2;
+    transition:all .5s cubic-bezier(.175, .885, .32, 1);
+}
+.checkbox input:checked + span:after {
+    left:32px;
+    background-image:none;
+}
+.checkbox input:checked + span:before {
+    background-color:#2098AE;
+}
+
+/**
+ * Radio
+ */
+.radia {
+    position: relative;
+    margin: 0.75em;
+    cursor: pointer;
+}
+input[type="radio"] {
+    display: none;
+}
+.radia span::before {
+    content: "";
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    margin-right: .75em;
+    background: #eee;
+    border-radius: 50%;
+    vertical-align: middle;
+    transition:all .5s cubic-bezier(.175, .885, .32, 1);
+
+}
+.radia span::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "";
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin-right: .75em;
+    border-radius: 50%;
+    vertical-align: middle;
+    position: absolute;
+    left: -2px;
+    line-height: 19px;
+    top: 0;
+    font-size: 11.5px;
+    transition: all .5s cubic-bezier(.175, .885, .32, 1);
+}
+.radia input:checked + span:after{
+    content: "\f00c";
+    color: #2098ae;
+    border: 2px solid #2098ae;
+    background: #fff;
+}
+.radia input:unchecked + span:after{
+    content: "";
+    border: none;
+    background: #eee;
+}
+.radia input:checked + span:before{
+    
+}
